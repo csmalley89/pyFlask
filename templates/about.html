@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>About</title>
+  {% if title %}
+    <title>Flask Blog - {{ title }}</title>
+  {% else %}
+    <title>Flask Blog</title>
+  {% endif %}
   <link rel="stylesheet" href="">
 </head>
 <body>

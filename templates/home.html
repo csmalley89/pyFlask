@@ -3,11 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home</title>
+  {% if title %}
+    <title>Flask Blog - {{ title }}</title>
+  {% else %}
+    <title>Flask Blog</title>
+  {% endif %}
   <link rel="stylesheet" href="">
 </head>
 <body>
   <h1>Hello World! What it do!</h1>
+  {% for post in posts %}
+    <h3>{{ post.title }}</h3>
+    <h5>By {{ post.author }} on {{ post.date_posted }} </h5>
+    <p>{{ post.content }}</p>
+  {% endfor %}
 
 </body>
 </html>
