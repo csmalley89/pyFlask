@@ -1,6 +1,8 @@
 /__pycache__
 *.pyc
 
+site.db
+
 # misc
 .DS_Store
 .env.local
